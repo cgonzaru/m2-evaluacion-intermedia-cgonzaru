@@ -5,6 +5,10 @@
     background-color: beige;
 }
 
+.pag__main{
+    position: relative;
+}
+
 .check{
     margin: 100px 0 10px 0;
 }
@@ -17,4 +21,13 @@
     border: 2px solid blue;
     margin: 100px;
     color: blue;
+}
+
+.counter{
+    position: absolute;
+    right: 20px;
+    top: 0;
+    font-weight: 900;
+    font-size: 40px;
+    color: red;
 }

@@ -9,7 +9,7 @@ let count = 0;
 
 
 
-// Función
+// Funciones 
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
@@ -18,7 +18,6 @@ const myRandomNumber = getRandomNumber(100);
 function guess () {
     const write = check.value;
 
-    // si el número introducido es mayor que el random (suponemos 10)
     if (write > myRandomNumber) { 
         solutionText.innerHTML = `Demasiado alto`;
     } else if (write < myRandomNumber) {
