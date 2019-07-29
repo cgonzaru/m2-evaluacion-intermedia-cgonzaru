@@ -4,26 +4,30 @@
 const button = document.querySelector('.btn');
 const check = document.querySelector('.check__input');
 let solutionText = document.querySelector('.solution__text');
-const counter = document.querySelector('.counter');
+let counter = document.querySelector('.counter');
+let count = 0;
+
+
 
 // Función
+function getRandomNumber(max) {
+    return Math.ceil(Math.random() * max);
+}
+const myRandomNumber = getRandomNumber(100);
+
 function guess () {
-    console.log('ok');
-    
     const write = check.value;
-    
-    console.log('el valor del campo es:', write);
-    
+
     // si el número introducido es mayor que el random (suponemos 10)
-    if (write > 10) { 
+    if (write > myRandomNumber) { 
         solutionText.innerHTML = `Demasiado alto`;
-        console.log('Demasiado alto');
-    } else if (write < 10) {
+    } else if (write < myRandomNumber) {
         solutionText.innerHTML = `Demasiado bajo`;
-        console.log('Demasiado bajo');
     } else {
         solutionText.innerHTML = `¡Has ganado campeona!`;
     }
+  
+
 }
 
 // Eventos
