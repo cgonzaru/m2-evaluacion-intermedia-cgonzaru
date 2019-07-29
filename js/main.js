@@ -27,6 +27,8 @@ function guess () {
         solutionText.innerHTML = `¡Has ganado campeona!`;
     }
   
+    count = count + 1;
+    counter.innerHTML = count;
 
 }
 
