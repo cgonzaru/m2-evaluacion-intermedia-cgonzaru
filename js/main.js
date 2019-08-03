@@ -2,7 +2,8 @@
 
 // Elementos del HTML
 const button = document.querySelector('.btn');
-const checkNumber = document.querySelector('.check__input-number');
+const buttonReset = document.querySelector('.btn-reset');
+let checkNumber = document.querySelector('.check__input-number');
 let solutionText = document.querySelector('.solution__text');
 
 let counter = document.querySelector('.counter');
@@ -12,7 +13,7 @@ let count = 0;
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
-const myRandomNumber = getRandomNumber(100);
+let myRandomNumber = getRandomNumber(100);
 
 function enterKey () {
     if (event.keyCode === 13) {
@@ -35,12 +36,24 @@ function guess () {
         solutionText.innerHTML = `El número introducido es más bajo que el que buscamos`;
         count = count + 1;
     } else {
-        solutionText.innerHTML = `¡Has ganado campeona!`;
+        solutionText.innerHTML = `¡Has ganado!`;
     }
      
     counter.innerHTML = count;
 }
 
+function reset () {
+    count = 0;
+    counter.innerHTML = count;
+
+    solutionText.innerHTML = `Escribe un número y dale a prueba`;
+
+    checkNumber.value = '';
+
+    myRandomNumber = getRandomNumber(100);
+}
+
 // Eventos
 button.addEventListener('click', guess);
+buttonReset.addEventListener('click', reset);
 checkNumber.addEventListener('keyup', enterKey);
