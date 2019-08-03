@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,23 +8,27 @@
     <title>Evaluación intermecia m2</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+
 <body class="pag__body">
 
     <main class="pag__main">
         <h1 class="title">Adivina el número</h1>
         <div class="check">
             <p class="check__text">Introduce aquí tu número</p>
-            <input type="number" class="check__input">
+            <label for="input-number">
+                <input type="number" class="check__input-number" id="input-number">
+            </label>
         </div>
         <button class="btn">Prueba</button>
 
         <div class="solution">
-            <p class="solution__text">Escribe un número  y dale a prueba</p>
+            <p class="solution__text">Escribe un número y dale a prueba</p>
         </div>
-        
+
         <div class="counter"></div>
     </main>
-    
+
     <script src="js/main.js"></script>
 </body>
+
 </html>
